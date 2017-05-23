@@ -7,7 +7,6 @@
 3. [Setup - The basics of getting started with pam_shield](#setup)
     * [What pam_shield affects](#what-pam_shield-affects)
 4. [Usage - Configuration options and additional functionality](#usage)
-5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 5. [Limitations - OS compatibility, etc.](#limitations)
 6. [Development - Guide for contributing to the module](#development)
 
@@ -16,6 +15,11 @@
 This module install pam_shield brute-force protection for sshd. It was developed for
 use with CentOS and by extension should work on Red Hat, Scientific and Fedora. It has
 not been tested with Debian or Ubuntu.
+
+Note: Version 2.0.0 is exactly the same as 1.1.2, except that it requires `puppet/selinux`
+>= 1.0.0, which is not backwards compatible with `puppet/selinux` < 1.0.0. Test carefully
+before upgrading `puppet/selinux`, because everything that calls it to load a policy
+will need to update its calling syntax.
 
 ## Module Description
 
@@ -87,13 +91,9 @@ String. Period until the entry expires from the database again. Formatting as `i
 Array of strings. Any IP address or subnet in CIDR notation. Default: `undef`
 
 ### `selinux_policy` ###
-Boolean. Install an SELinux policy to allow pam_shield to operate normally. Requires jfryman/selinux which
-is not currently in Puppet Forge (pending [issue #7](https://github.com/jfryman/puppet-selinux/issues/7).
+Boolean. Install an SELinux policy to allow pam_shield to operate normally. Requires `puppet/selinux` which
+defaults to `false` because it can do unexpected things. Test before deploying!
 Default: `false`
-
-## Reference
-
-... one day
 
 ## Limitations
 
