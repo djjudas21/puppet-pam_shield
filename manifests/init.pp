@@ -31,7 +31,7 @@ class pam_shield (
 
   # Ensure the DB file is present as the rpm doesn't always create it
   file { '/var/lib/pam_shield/db':
-    ensure  => present,
+    ensure  => file,
     owner   => 'root',
     group   => 'root',
     mode    => '0600',
