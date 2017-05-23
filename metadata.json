@@ -17,22 +17,22 @@
     {
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
-        "5.0",
-        "6.0"
+        "6",
+        "7"
       ]
     },
     {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
-        "5.0",
-        "6.0"
+        "6",
+        "7"
       ]
     },
     {
       "operatingsystem": "Scientific Linux",
       "operatingsystemrelease": [
-        "5.0",
-        "6.0"
+        "6",
+        "7"
       ]
     },
     {
@@ -42,7 +42,11 @@
         "18",
         "19",
         "20",
-        "21"
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
       ]
     }
   ],
