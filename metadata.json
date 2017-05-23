@@ -52,6 +52,10 @@
       "version_range": "4.x"
     },
     {
+      "name": "puppet/selinux",
+      "version_range": ">= 1.0.0 < 2.0.0"
+    },
+    {
       "name": "stahnma/epel",
       "version_range": "1.x"
     }
