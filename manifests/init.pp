@@ -51,8 +51,8 @@ class pam_shield (
   # Requires jfryman/selinux which is not currently in the Forge
   if ($selinux_policy == true and $::selinux == true) {
     selinux::module { 'pam-shield':
-      ensure => 'present',
-      source => 'puppet:///modules/pam_shield/pam-shield.te',
+      ensure    => 'present',
+      source_te => 'puppet:///modules/pam_shield/pam-shield.te',
     }
   }
 
